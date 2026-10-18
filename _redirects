@@ -1,0 +1,3 @@
+# Evita conteúdo duplicado: /index.html e /index vão para a raiz
+/index.html  /  301!
+/index       /  301!
