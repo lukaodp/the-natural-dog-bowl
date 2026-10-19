@@ -194,7 +194,7 @@
             
             <ul class="plan-features"><li><span aria-hidden="true">✓</span><span class="t"><b>100 recipes</b>: 50 cooked + 50 raw</span></li><li><span aria-hidden="true">✓</span> Simple steps and easy swaps</li><li><span aria-hidden="true">✓</span> 7-day money-back guarantee</li></ul>
             <div class="bonus-box"><p class="bonus-title">🎁 + 3 FREE BONUSES</p><ul><li><span aria-hidden="true">🐾</span><span><b>Bonus 1:</b> dog training guide</span></li><li><span aria-hidden="true">🚦</span><span><b>Bonus 2:</b> traffic-light food guide</span></li><li><span aria-hidden="true">⚖️</span><span><b>Bonus 3:</b> portion calculator</span></li></ul></div>
-            <button class="button button-dark plan-button" type="button" data-plan="complete">Get the Complete Plan · US$ 16.90</button>
+            <a class="button button-dark plan-button" href="https://pay.hotmart.com/S108079168D?bid=1792286420154" data-plan="complete">Get the Complete Plan · US$ 16.90</a>
             <p class="pm">7-day money-back guarantee · Instant PDF download</p>
           </article>
           <article class="plan-card plan-basic">
@@ -203,7 +203,7 @@
             <div class="price-row"><span class="currency">US$</span><strong>9.90</strong></div>
             
             <ul class="plan-features"><li><span aria-hidden="true">✓</span> 50 raw recipes</li><li><span aria-hidden="true">✓</span> Simple steps and easy swaps</li><li><span aria-hidden="true">✓</span> 7-day money-back guarantee</li><li class="no"><span aria-hidden="true">✕</span> 50 cooked recipes</li><li class="no"><span aria-hidden="true">✕</span> Bonus: dog training guide</li><li class="no"><span aria-hidden="true">✕</span> Bonus: traffic-light food guide</li><li class="no"><span aria-hidden="true">✕</span> Bonus: portion calculator</li></ul>
-            <button class="button button-outline plan-button" type="button" data-plan="basic">Get the Basic Plan</button>
+            <a class="button button-outline plan-button" href="https://pay.hotmart.com/S108079168D?off=48qktto9" data-plan="basic">Get the Basic Plan</a>
             <p class="pm">7-day money-back guarantee · Instant PDF download</p>
             
           </article>
@@ -255,7 +255,7 @@
       <p class="section-kicker">WAIT, BEFORE YOU GO</p><h2 id="exit-title">Basic Plan for US$ 6.90</h2>
       <p>50 raw recipes with simple steps and swaps. Instant PDF and 7-day money-back guarantee. Special price shown only here.</p>
       <p class="exit-price"><s>US$ 9.90</s> <strong>US$ 6.90</strong></p>
-      <button class="button button-dark" type="button" data-plan="basic690">Get it for US$ 6.90</button>
+      <a class="button button-dark" href="https://pay.hotmart.com/S108079168D?off=chm5xxx3" data-plan="basic690">Get it for US$ 6.90</a>
       <form method="dialog"><button class="exit-no">No thanks</button></form>
     </dialog>
 
@@ -264,8 +264,8 @@
       <p class="section-kicker">ALMOST THERE</p><h2 id="dialog-title">Checkout is loading.</h2><p id="dialog-copy">Please try again in a moment.</p>
       <button class="button button-dark dialog-ok" type="button">Got it</button>
     </dialog>
-  <script>(()=>{const checkoutUrls={complete:"https://pay.hotmart.com/S108079168D?bid=1792286420154",basic:"https://pay.hotmart.com/S108079168D?off=48qktto9",basic690:"https://pay.hotmart.com/S108079168D?off=chm5xxx3"};const d=document.getElementById("checkout-dialog"),ed=document.getElementById("exit-dialog");let go=false;
-document.querySelectorAll("[data-plan]").forEach(b=>b.addEventListener("click",()=>{go=true;const u=checkoutUrls[b.dataset.plan];if(window.fbq)fbq("track","InitiateCheckout");if(u){setTimeout(()=>{location.href=u},350);return}ed.open&&ed.close();d.showModal?d.showModal():alert("Checkout is loading. Please try again in a moment.")}));
+  <script>(()=>{let go=false;const d=document.getElementById("checkout-dialog"),ed=document.getElementById("exit-dialog");
+document.querySelectorAll("a[data-plan]").forEach(a=>a.addEventListener("click",()=>{go=true;try{const u=new URL(a.href);new URLSearchParams(location.search).forEach((v,k)=>{if(!u.searchParams.has(k))u.searchParams.set(k,v)});a.href=u.toString()}catch(e){}try{if(window.LowTrack&&LowTrack.trackIC)LowTrack.trackIC()}catch(e){}if(window.fbq)fbq("track","InitiateCheckout",{content_name:a.dataset.plan})}));
 document.querySelector(".dialog-ok")?.addEventListener("click",()=>d.close());
 const fab=document.getElementById("fab"),pl=document.getElementById("plans");let sc=false,np=false;function f(){fab.classList.toggle("on",sc&&!np)}if("IntersectionObserver"in window)new IntersectionObserver(([x])=>{np=x.isIntersecting;f()}).observe(pl);addEventListener("scroll",()=>{const v=scrollY>400;if(v!==sc){sc=v;f()}},{passive:true});
 let shown=false;try{shown=sessionStorage.getItem("exitShown")==="1"}catch(e){}
